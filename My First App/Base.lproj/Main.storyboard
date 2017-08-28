@@ -1,26 +1,102 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Person Start View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="PersonStartViewController" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clouds" translatesAutoresizingMaskIntoConstraints="NO" id="iL6-6m-SCJ" userLabel="Background">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="swq-bG-MAV">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="90"/>
+                                    </constraint>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KdZ-4f-82G" userLabel="First Name">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iyW-fj-DHY" userLabel="Last Name">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="JFU-gv-wXX">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Person" translatesAutoresizingMaskIntoConstraints="NO" id="cAV-Lm-Wcc" userLabel="Avatar">
+                                        <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="cAV-Lm-Wcc" secondAttribute="height" multiplier="1:1" id="oqO-bo-29a"/>
+                                            <constraint firstAttribute="height" constant="200" id="yc1-Nt-AqK">
+                                                <variation key="heightClass=compact-widthClass=compact" constant="100"/>
+                                            </constraint>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="cAV-Lm-Wcc" firstAttribute="centerX" secondItem="JFU-gv-wXX" secondAttribute="centerX" id="mem-jj-Hrj"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5jt-Dh-dVg" userLabel="Back">
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="changeName:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Efy-pX-wsl"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="5jt-Dh-dVg" secondAttribute="trailing" id="3G9-0s-AvM"/>
+                            <constraint firstItem="iyW-fj-DHY" firstAttribute="top" secondItem="KdZ-4f-82G" secondAttribute="bottom" constant="10" id="40T-xP-o5M"/>
+                            <constraint firstItem="KdZ-4f-82G" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="49L-Og-zQb"/>
+                            <constraint firstItem="iyW-fj-DHY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="5o5-Kt-nZd"/>
+                            <constraint firstItem="KdZ-4f-82G" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="L4T-Us-rUf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KdZ-4f-82G" secondAttribute="trailing" id="UJf-cI-5p1"/>
+                            <constraint firstItem="iyW-fj-DHY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Uel-w4-GeK"/>
+                            <constraint firstItem="iL6-6m-SCJ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="YMF-iT-q4A"/>
+                            <constraint firstItem="JFU-gv-wXX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YdR-bc-xgw"/>
+                            <constraint firstItem="5jt-Dh-dVg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="abY-XG-h0M"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5jt-Dh-dVg" secondAttribute="bottom" constant="20" id="gWJ-Y5-DVD"/>
+                            <constraint firstItem="iyW-fj-DHY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gtP-fz-9BX"/>
+                            <constraint firstItem="KdZ-4f-82G" firstAttribute="top" secondItem="JFU-gv-wXX" secondAttribute="bottom" constant="20" id="hlC-Xs-SIm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iyW-fj-DHY" secondAttribute="trailing" id="nD7-aZ-UdY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iL6-6m-SCJ" secondAttribute="trailing" constant="-20" id="pOq-Ma-KKF"/>
+                            <constraint firstItem="JFU-gv-wXX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="uXB-p6-qvZ"/>
+                            <constraint firstItem="iL6-6m-SCJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="vji-2q-iLP"/>
+                            <constraint firstItem="KdZ-4f-82G" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wY9-j3-sX1"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="iL6-6m-SCJ" id="yBo-dO-6md"/>
+                        <outlet property="button" destination="5jt-Dh-dVg" id="7cJ-jp-FHv"/>
+                        <outlet property="firstNameLabel" destination="KdZ-4f-82G" id="tBa-vC-Sdr"/>
+                        <outlet property="lastNameLabel" destination="iyW-fj-DHY" id="gQg-cx-MAc"/>
+                        <outlet property="photoImageView" destination="cAV-Lm-Wcc" id="7rF-X4-qtX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="23.188405797101453" y="34.239130434782609"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Clouds" width="1365" height="768"/>
+        <image name="Person" width="944" height="941"/>
+    </resources>
 </document>
