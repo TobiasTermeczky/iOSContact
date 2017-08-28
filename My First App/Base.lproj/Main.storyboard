@@ -40,7 +40,6 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="JFU-gv-wXX">
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Person" translatesAutoresizingMaskIntoConstraints="NO" id="cAV-Lm-Wcc" userLabel="Avatar">
-                                        <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="cAV-Lm-Wcc" secondAttribute="height" multiplier="1:1" id="oqO-bo-29a"/>
                                             <constraint firstAttribute="height" constant="200" id="yc1-Nt-AqK">

@@ -67,29 +67,14 @@ class PersonStartViewController: UIViewController {
     func handleNewUser(firstName: String, lastName: String, profilePhoto: String){
         firstNameLabel.text = firstName
         lastNameLabel.text = lastName
-        if let checkedUrl = URL(string: profilePhoto) {
-            downloadImage(url: checkedUrl)
-        }    }
-    
-    func getDataFromUrl(url: URL, completion: @escaping (_ data: Data?, _  response: URLResponse?, _ error: Error?) -> Void) {
-        URLSession.shared.dataTask(with: url) {
-            (data, response, error) in
-            completion(data, response, error)
-            }.resume()
-    }
-    
-    func downloadImage(url: URL) {
-        print("Download Started")
-        getDataFromUrl(url: url) { (data, response, error)  in
-            guard let data = data, error == nil else { return }
-            print(response?.suggestedFilename ?? url.lastPathComponent)
-            print("Download Finished")
-            DispatchQueue.main.async() { () -> Void in
-                self.photoImageView.image = UIImage(data: data)
+        DispatchQueue.global().async {
+            let data = try? Data(contentsOf: URL(string: profilePhoto)!);
+            DispatchQueue.main.async {
+                self.photoImageView.image = UIImage(data: data!)
             }
         }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
