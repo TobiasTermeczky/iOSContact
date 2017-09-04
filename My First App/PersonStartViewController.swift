@@ -9,8 +9,12 @@
 import UIKit
 import Darwin
 
-class PersonStartViewController: UIViewController {
 
+
+class PersonStartViewController: UIViewController {
+    
+    var person : Person?
+    
     @IBOutlet weak var firstNameLabel: UILabel!
     @IBOutlet weak var lastNameLabel: UILabel!
     @IBOutlet weak var photoImageView: UIImageView!
@@ -19,65 +23,22 @@ class PersonStartViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        firstNameLabel.text = "Harold"
-        lastNameLabel.text = "Stock"
-        button.setTitle("Refresh", for: .normal)
         
-        if let image = UIImage(named: "Person"){
-            photoImageView.image = image
-        }
+        self.navigationItem.title = "" + (person?.firstName?.capitalized)! + "'s Details";
+        firstNameLabel.text = person?.firstName?.capitalized
+        lastNameLabel.text = person?.lastName?.capitalized
+        photoImageView.image = person?.profilePhoto
         
         if let image = UIImage(named: "Clouds"){
             backgroundImageView.image = image
         }
 
         uiStyling()
-        
-        // Do any additional setup after loading the view.
     }
     
-    @IBAction func changeName(_ sender: UIButton) {
-        let postEndpoint: String = "https://randomuser.me/api/"
-        let session = URLSession.shared
-        let url = URL(string: postEndpoint)!
-        
-        session.dataTask(with: url, completionHandler: {(data: Data?, response: URLResponse?, error: Error?) -> Void in
-            guard let realResponse = response as? HTTPURLResponse, realResponse.statusCode == 200 else {
-                print("Not a 200 response")
-                return
-            }
-
-            let json = try! JSONSerialization.jsonObject(with: data!) as? [String: Any]
-            let results = json?["results"] as? [[String: Any]]
-            
-            for result in results!{
-                let name = result["name"] as? [String: Any]
-                let firstName = name?["first"] as? String
-                let lastName = name?["last"] as? String
-                let picture = result["picture"] as? [String: Any]
-                let profilePhoto = picture?["large"] as? String
-                DispatchQueue.main.async(execute: {
-                    self.handleNewUser(firstName: firstName!, lastName: lastName!, profilePhoto: profilePhoto!)
-                })
-                
-            }
-        }).resume()
-    }
-    
-    func handleNewUser(firstName: String, lastName: String, profilePhoto: String){
-        firstNameLabel.text = firstName
-        lastNameLabel.text = lastName
-        DispatchQueue.global().async {
-            let data = try? Data(contentsOf: URL(string: profilePhoto)!);
-            DispatchQueue.main.async {
-                self.photoImageView.image = UIImage(data: data!)
-            }
-        }
-    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func uiStyling(){
@@ -87,15 +48,4 @@ class PersonStartViewController: UIViewController {
         photoImageView.clipsToBounds = true
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

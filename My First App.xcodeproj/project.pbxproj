@@ -15,6 +15,7 @@
 		09BFC5ED1F540B36004201D7 /* My_First_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BFC5EC1F540B36004201D7 /* My_First_AppTests.swift */; };
 		09BFC5F81F540B36004201D7 /* My_First_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BFC5F71F540B36004201D7 /* My_First_AppUITests.swift */; };
 		09BFC6081F54197C004201D7 /* PersonStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BFC6071F54197C004201D7 /* PersonStartViewController.swift */; };
+		09EBEF7C1F5D6CE2008A4464 /* PersonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EBEF7B1F5D6CE2008A4464 /* PersonTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		09BFC5F71F540B36004201D7 /* My_First_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = My_First_AppUITests.swift; sourceTree = "<group>"; };
 		09BFC5F91F540B36004201D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09BFC6071F54197C004201D7 /* PersonStartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonStartViewController.swift; sourceTree = "<group>"; };
+		09EBEF7B1F5D6CE2008A4464 /* PersonTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				09BFC5E01F540B36004201D7 /* LaunchScreen.storyboard */,
 				09BFC5E31F540B36004201D7 /* Info.plist */,
 				09BFC6071F54197C004201D7 /* PersonStartViewController.swift */,
+				09EBEF7B1F5D6CE2008A4464 /* PersonTableViewController.swift */,
 			);
 			path = "My First App";
 			sourceTree = "<group>";
@@ -191,11 +194,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Tobias Termeczky";
 				TargetAttributes = {
 					09BFC5D31F540B35004201D7 = {
 						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					09BFC5E71F540B36004201D7 = {
@@ -262,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09EBEF7C1F5D6CE2008A4464 /* PersonTableViewController.swift in Sources */,
 				09BFC5DA1F540B36004201D7 /* ViewController.swift in Sources */,
 				09BFC6081F54197C004201D7 /* PersonStartViewController.swift in Sources */,
 				09BFC5D81F540B36004201D7 /* AppDelegate.swift in Sources */,
@@ -337,6 +342,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -387,6 +393,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -416,11 +423,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "My First App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yzaazy.nl.My-First-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -429,6 +438,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "My First App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -511,6 +521,7 @@
 				09BFC5FE1F540B36004201D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		09BFC5FF1F540B36004201D7 /* Build configuration list for PBXNativeTarget "My First AppTests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +530,7 @@
 				09BFC6011F540B36004201D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		09BFC6021F540B36004201D7 /* Build configuration list for PBXNativeTarget "My First AppUITests" */ = {
 			isa = XCConfigurationList;
@@ -527,6 +539,7 @@
 				09BFC6041F540B36004201D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
