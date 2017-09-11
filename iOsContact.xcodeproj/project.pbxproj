@@ -14,7 +14,9 @@
 		09BFC5E21F540B36004201D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09BFC5E01F540B36004201D7 /* LaunchScreen.storyboard */; };
 		09BFC5ED1F540B36004201D7 /* My_First_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BFC5EC1F540B36004201D7 /* My_First_AppTests.swift */; };
 		09BFC5F81F540B36004201D7 /* My_First_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BFC5F71F540B36004201D7 /* My_First_AppUITests.swift */; };
-		09BFC6081F54197C004201D7 /* PersonStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BFC6071F54197C004201D7 /* PersonStartViewController.swift */; };
+		09BFC6081F54197C004201D7 /* PersonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BFC6071F54197C004201D7 /* PersonDetailViewController.swift */; };
+		09CAB8EA1F668E7B00DDC5F4 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CAB8E91F668E7B00DDC5F4 /* Person.swift */; };
+		09CAB8EC1F66920500DDC5F4 /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CAB8EB1F66920500DDC5F4 /* PersonTableViewCell.swift */; };
 		09EBEF7C1F5D6CE2008A4464 /* PersonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EBEF7B1F5D6CE2008A4464 /* PersonTableViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -36,20 +38,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		09BFC5D41F540B36004201D7 /* My First App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My First App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		09BFC5D41F540B36004201D7 /* iOsContact.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOsContact.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09BFC5D71F540B36004201D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09BFC5D91F540B36004201D7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		09BFC5DC1F540B36004201D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		09BFC5DE1F540B36004201D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09BFC5E11F540B36004201D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09BFC5E31F540B36004201D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		09BFC5E81F540B36004201D7 /* My First AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "My First AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		09BFC5E81F540B36004201D7 /* iOsContactTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOsContactTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		09BFC5EC1F540B36004201D7 /* My_First_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = My_First_AppTests.swift; sourceTree = "<group>"; };
 		09BFC5EE1F540B36004201D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		09BFC5F31F540B36004201D7 /* My First AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "My First AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		09BFC5F31F540B36004201D7 /* iOsContactUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOsContactUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		09BFC5F71F540B36004201D7 /* My_First_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = My_First_AppUITests.swift; sourceTree = "<group>"; };
 		09BFC5F91F540B36004201D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		09BFC6071F54197C004201D7 /* PersonStartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonStartViewController.swift; sourceTree = "<group>"; };
+		09BFC6071F54197C004201D7 /* PersonDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonDetailViewController.swift; sourceTree = "<group>"; };
+		09CAB8E91F668E7B00DDC5F4 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		09CAB8EB1F66920500DDC5F4 /* PersonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
 		09EBEF7B1F5D6CE2008A4464 /* PersonTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,9 +85,9 @@
 		09BFC5CB1F540B35004201D7 = {
 			isa = PBXGroup;
 			children = (
-				09BFC5D61F540B36004201D7 /* My First App */,
-				09BFC5EB1F540B36004201D7 /* My First AppTests */,
-				09BFC5F61F540B36004201D7 /* My First AppUITests */,
+				09BFC5D61F540B36004201D7 /* iOsContact */,
+				09BFC5EB1F540B36004201D7 /* iOsContactTests */,
+				09BFC5F61F540B36004201D7 /* iOsContactUITests */,
 				09BFC5D51F540B36004201D7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,14 +95,14 @@
 		09BFC5D51F540B36004201D7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				09BFC5D41F540B36004201D7 /* My First App.app */,
-				09BFC5E81F540B36004201D7 /* My First AppTests.xctest */,
-				09BFC5F31F540B36004201D7 /* My First AppUITests.xctest */,
+				09BFC5D41F540B36004201D7 /* iOsContact.app */,
+				09BFC5E81F540B36004201D7 /* iOsContactTests.xctest */,
+				09BFC5F31F540B36004201D7 /* iOsContactUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		09BFC5D61F540B36004201D7 /* My First App */ = {
+		09BFC5D61F540B36004201D7 /* iOsContact */ = {
 			isa = PBXGroup;
 			children = (
 				09BFC5D71F540B36004201D7 /* AppDelegate.swift */,
@@ -107,36 +111,41 @@
 				09BFC5DE1F540B36004201D7 /* Assets.xcassets */,
 				09BFC5E01F540B36004201D7 /* LaunchScreen.storyboard */,
 				09BFC5E31F540B36004201D7 /* Info.plist */,
-				09BFC6071F54197C004201D7 /* PersonStartViewController.swift */,
+				09BFC6071F54197C004201D7 /* PersonDetailViewController.swift */,
 				09EBEF7B1F5D6CE2008A4464 /* PersonTableViewController.swift */,
+				09CAB8E91F668E7B00DDC5F4 /* Person.swift */,
+				09CAB8EB1F66920500DDC5F4 /* PersonTableViewCell.swift */,
 			);
+			name = iOsContact;
 			path = "My First App";
 			sourceTree = "<group>";
 		};
-		09BFC5EB1F540B36004201D7 /* My First AppTests */ = {
+		09BFC5EB1F540B36004201D7 /* iOsContactTests */ = {
 			isa = PBXGroup;
 			children = (
 				09BFC5EC1F540B36004201D7 /* My_First_AppTests.swift */,
 				09BFC5EE1F540B36004201D7 /* Info.plist */,
 			);
+			name = iOsContactTests;
 			path = "My First AppTests";
 			sourceTree = "<group>";
 		};
-		09BFC5F61F540B36004201D7 /* My First AppUITests */ = {
+		09BFC5F61F540B36004201D7 /* iOsContactUITests */ = {
 			isa = PBXGroup;
 			children = (
 				09BFC5F71F540B36004201D7 /* My_First_AppUITests.swift */,
 				09BFC5F91F540B36004201D7 /* Info.plist */,
 			);
+			name = iOsContactUITests;
 			path = "My First AppUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		09BFC5D31F540B35004201D7 /* My First App */ = {
+		09BFC5D31F540B35004201D7 /* iOsContact */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 09BFC5FC1F540B36004201D7 /* Build configuration list for PBXNativeTarget "My First App" */;
+			buildConfigurationList = 09BFC5FC1F540B36004201D7 /* Build configuration list for PBXNativeTarget "iOsContact" */;
 			buildPhases = (
 				09BFC5D01F540B35004201D7 /* Sources */,
 				09BFC5D11F540B35004201D7 /* Frameworks */,
@@ -146,14 +155,14 @@
 			);
 			dependencies = (
 			);
-			name = "My First App";
+			name = iOsContact;
 			productName = "My First App";
-			productReference = 09BFC5D41F540B36004201D7 /* My First App.app */;
+			productReference = 09BFC5D41F540B36004201D7 /* iOsContact.app */;
 			productType = "com.apple.product-type.application";
 		};
-		09BFC5E71F540B36004201D7 /* My First AppTests */ = {
+		09BFC5E71F540B36004201D7 /* iOsContactTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 09BFC5FF1F540B36004201D7 /* Build configuration list for PBXNativeTarget "My First AppTests" */;
+			buildConfigurationList = 09BFC5FF1F540B36004201D7 /* Build configuration list for PBXNativeTarget "iOsContactTests" */;
 			buildPhases = (
 				09BFC5E41F540B36004201D7 /* Sources */,
 				09BFC5E51F540B36004201D7 /* Frameworks */,
@@ -164,14 +173,14 @@
 			dependencies = (
 				09BFC5EA1F540B36004201D7 /* PBXTargetDependency */,
 			);
-			name = "My First AppTests";
+			name = iOsContactTests;
 			productName = "My First AppTests";
-			productReference = 09BFC5E81F540B36004201D7 /* My First AppTests.xctest */;
+			productReference = 09BFC5E81F540B36004201D7 /* iOsContactTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		09BFC5F21F540B36004201D7 /* My First AppUITests */ = {
+		09BFC5F21F540B36004201D7 /* iOsContactUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 09BFC6021F540B36004201D7 /* Build configuration list for PBXNativeTarget "My First AppUITests" */;
+			buildConfigurationList = 09BFC6021F540B36004201D7 /* Build configuration list for PBXNativeTarget "iOsContactUITests" */;
 			buildPhases = (
 				09BFC5EF1F540B36004201D7 /* Sources */,
 				09BFC5F01F540B36004201D7 /* Frameworks */,
@@ -182,9 +191,9 @@
 			dependencies = (
 				09BFC5F51F540B36004201D7 /* PBXTargetDependency */,
 			);
-			name = "My First AppUITests";
+			name = iOsContactUITests;
 			productName = "My First AppUITests";
-			productReference = 09BFC5F31F540B36004201D7 /* My First AppUITests.xctest */;
+			productReference = 09BFC5F31F540B36004201D7 /* iOsContactUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -214,7 +223,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 09BFC5CF1F540B35004201D7 /* Build configuration list for PBXProject "My First App" */;
+			buildConfigurationList = 09BFC5CF1F540B35004201D7 /* Build configuration list for PBXProject "iOsContact" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -227,9 +236,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				09BFC5D31F540B35004201D7 /* My First App */,
-				09BFC5E71F540B36004201D7 /* My First AppTests */,
-				09BFC5F21F540B36004201D7 /* My First AppUITests */,
+				09BFC5D31F540B35004201D7 /* iOsContact */,
+				09BFC5E71F540B36004201D7 /* iOsContactTests */,
+				09BFC5F21F540B36004201D7 /* iOsContactUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -266,9 +275,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09CAB8EC1F66920500DDC5F4 /* PersonTableViewCell.swift in Sources */,
+				09CAB8EA1F668E7B00DDC5F4 /* Person.swift in Sources */,
 				09EBEF7C1F5D6CE2008A4464 /* PersonTableViewController.swift in Sources */,
 				09BFC5DA1F540B36004201D7 /* ViewController.swift in Sources */,
-				09BFC6081F54197C004201D7 /* PersonStartViewController.swift in Sources */,
+				09BFC6081F54197C004201D7 /* PersonDetailViewController.swift in Sources */,
 				09BFC5D81F540B36004201D7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,12 +305,12 @@
 /* Begin PBXTargetDependency section */
 		09BFC5EA1F540B36004201D7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 09BFC5D31F540B35004201D7 /* My First App */;
+			target = 09BFC5D31F540B35004201D7 /* iOsContact */;
 			targetProxy = 09BFC5E91F540B36004201D7 /* PBXContainerItemProxy */;
 		};
 		09BFC5F51F540B36004201D7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 09BFC5D31F540B35004201D7 /* My First App */;
+			target = 09BFC5D31F540B35004201D7 /* iOsContact */;
 			targetProxy = 09BFC5F41F540B36004201D7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -458,7 +469,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yzaazy.nl.My-First-AppTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/My First App.app/My First App";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOsContact.app/iOsContact";
 			};
 			name = Debug;
 		};
@@ -472,7 +483,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yzaazy.nl.My-First-AppTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/My First App.app/My First App";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOsContact.app/iOsContact";
 			};
 			name = Release;
 		};
@@ -505,7 +516,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		09BFC5CF1F540B35004201D7 /* Build configuration list for PBXProject "My First App" */ = {
+		09BFC5CF1F540B35004201D7 /* Build configuration list for PBXProject "iOsContact" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				09BFC5FA1F540B36004201D7 /* Debug */,
@@ -514,7 +525,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		09BFC5FC1F540B36004201D7 /* Build configuration list for PBXNativeTarget "My First App" */ = {
+		09BFC5FC1F540B36004201D7 /* Build configuration list for PBXNativeTarget "iOsContact" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				09BFC5FD1F540B36004201D7 /* Debug */,
@@ -523,7 +534,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		09BFC5FF1F540B36004201D7 /* Build configuration list for PBXNativeTarget "My First AppTests" */ = {
+		09BFC5FF1F540B36004201D7 /* Build configuration list for PBXNativeTarget "iOsContactTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				09BFC6001F540B36004201D7 /* Debug */,
@@ -532,7 +543,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		09BFC6021F540B36004201D7 /* Build configuration list for PBXNativeTarget "My First AppUITests" */ = {
+		09BFC6021F540B36004201D7 /* Build configuration list for PBXNativeTarget "iOsContactUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				09BFC6031F540B36004201D7 /* Debug */,

@@ -11,7 +11,7 @@ import Darwin
 
 
 
-class PersonStartViewController: UIViewController {
+class PersonDetailViewController: UIViewController {
     
     var person : Person?
     

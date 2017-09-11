@@ -8,18 +8,6 @@
 
 import UIKit
 
-class Person {
-    var firstName: String?
-    var lastName: String?
-    var profilePhoto: UIImage?
-}
-
-class PersonTableViewCell: UITableViewCell{
-    @IBOutlet weak var fullNameLabel: UILabel!
-    @IBOutlet weak var personImageView: UIImageView!
-    
-}
-
 class PersonTableViewController: UITableViewController {
     var persons: [Person] = []
 
@@ -37,21 +25,6 @@ class PersonTableViewController: UITableViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    @IBAction func btnClick(_ sender: Any){
-        self.performSegue(withIdentifier: "seguesPersonTableToDetails", sender: self)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "personDetails" {
-            if let destination = segue.destination as? PersonStartViewController{
-                if let indexPath = self.tableView.indexPathForSelectedRow{
-                    let person = persons[indexPath.row]
-                    destination.person = person
-                }
-            }
-        }
     }
     
     func getPersons(){
@@ -75,14 +48,12 @@ class PersonTableViewController: UITableViewController {
                 let picture = result["picture"] as? [String: Any]
                 let profilePhoto = picture?["large"] as? String
                 DispatchQueue.main.async(execute: {
-                    let p1 = Person()
-                    p1.firstName = firstName!
-                    p1.lastName = lastName!
                     DispatchQueue.global().async {
                         let url = profilePhoto;
                         let data = try? Data(contentsOf: URL(string: url!)!);
                         DispatchQueue.main.async {
-                            p1.profilePhoto = UIImage(data: data!)
+                            let profileImage = UIImage(data: data!)
+                            let p1 = Person(firstname: firstName!, lastname: lastName!, image: profileImage!)
                             self.persons.append(p1)
                             self.tableView.reloadData()
                         }
@@ -94,14 +65,11 @@ class PersonTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return persons.count
     }
     
@@ -161,15 +129,19 @@ class PersonTableViewController: UITableViewController {
         return true
     }
     */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func btnClick(_ sender: Any){
+        self.performSegue(withIdentifier: "seguesPersonTableToDetails", sender: self)
     }
-    */
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "personDetails" {
+            if let destination = segue.destination as? PersonDetailViewController{
+                let index = self.tableView.indexPathForSelectedRow?.row
+                let person = self.persons[index!]
+                destination.person = person
+            }
+        }
+    }
 
 }

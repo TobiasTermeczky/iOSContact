@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "09BFC5D31F540B35004201D7"
-               BuildableName = "My First App.app"
-               BlueprintName = "My First App"
-               ReferencedContainer = "container:My First App.xcodeproj">
+               BuildableName = "iOsContact.app"
+               BlueprintName = "iOsContact"
+               ReferencedContainer = "container:iOsContact.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "09BFC5E71F540B36004201D7"
-               BuildableName = "My First AppTests.xctest"
-               BlueprintName = "My First AppTests"
-               ReferencedContainer = "container:My First App.xcodeproj">
+               BuildableName = "iOsContactTests.xctest"
+               BlueprintName = "iOsContactTests"
+               ReferencedContainer = "container:iOsContact.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "09BFC5F21F540B36004201D7"
-               BuildableName = "My First AppUITests.xctest"
-               BlueprintName = "My First AppUITests"
-               ReferencedContainer = "container:My First App.xcodeproj">
+               BuildableName = "iOsContactUITests.xctest"
+               BlueprintName = "iOsContactUITests"
+               ReferencedContainer = "container:iOsContact.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "09BFC5D31F540B35004201D7"
-            BuildableName = "My First App.app"
-            BlueprintName = "My First App"
-            ReferencedContainer = "container:My First App.xcodeproj">
+            BuildableName = "iOsContact.app"
+            BlueprintName = "iOsContact"
+            ReferencedContainer = "container:iOsContact.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "09BFC5D31F540B35004201D7"
-            BuildableName = "My First App.app"
-            BlueprintName = "My First App"
-            ReferencedContainer = "container:My First App.xcodeproj">
+            BuildableName = "iOsContact.app"
+            BlueprintName = "iOsContact"
+            ReferencedContainer = "container:iOsContact.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "09BFC5D31F540B35004201D7"
-            BuildableName = "My First App.app"
-            BlueprintName = "My First App"
-            ReferencedContainer = "container:My First App.xcodeproj">
+            BuildableName = "iOsContact.app"
+            BlueprintName = "iOsContact"
+            ReferencedContainer = "container:iOsContact.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
