@@ -45,6 +45,8 @@ class PersonTableViewController: UITableViewController {
                 let name = result["name"] as? [String: Any]
                 let firstName = name?["first"] as? String
                 let lastName = name?["last"] as? String
+                let email = result["email"] as? String
+                let phone = result["phone"] as? String
                 let picture = result["picture"] as? [String: Any]
                 let profilePhoto = picture?["large"] as? String
                 DispatchQueue.main.async(execute: {
@@ -53,7 +55,7 @@ class PersonTableViewController: UITableViewController {
                         let data = try? Data(contentsOf: URL(string: url!)!);
                         DispatchQueue.main.async {
                             let profileImage = UIImage(data: data!)
-                            let p1 = Person(firstname: firstName!, lastname: lastName!, image: profileImage!)
+                            let p1 = Person(firstname: firstName!, lastname: lastName!, email: email!, phone: phone! ,image: profileImage!)
                             self.persons.append(p1)
                             self.tableView.reloadData()
                         }

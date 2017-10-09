@@ -17,6 +17,8 @@ class PersonDetailViewController: UIViewController {
     
     @IBOutlet weak var firstNameLabel: UILabel!
     @IBOutlet weak var lastNameLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var phoneLabel: UILabel!
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var backgroundImageView: UIImageView!
@@ -27,6 +29,8 @@ class PersonDetailViewController: UIViewController {
         self.navigationItem.title = "" + (person?.firstName?.capitalized)! + "'s Details";
         firstNameLabel.text = person?.firstName?.capitalized
         lastNameLabel.text = person?.lastName?.capitalized
+        emailLabel.text = person?.email
+        phoneLabel.text = person?.phone
         photoImageView.image = person?.profilePhoto
         
         if let image = UIImage(named: "Clouds"){
